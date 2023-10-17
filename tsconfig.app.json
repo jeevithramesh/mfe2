@@ -2,14 +2,16 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "types": []
+    "outDir": "../../out-tsc/app",
+    "types": [],
+    "paths": {
+      "mfe_2/*": ["mfe/mfe2/src/lib/*"]
+    }
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "src/lib/modules/about-me/about-me.module.ts"
   ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+  "include": ["src/**/*.d.ts"]
 }
